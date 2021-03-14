@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var group4 = [Int:String]()
     var group5 = [Int:String]()
     var group6 = [Int:String]()
+    @IBOutlet weak var UpperImage: UIImageView!
+    @IBOutlet weak var LowerImage: UIImageView!
     
     @IBOutlet weak var MainTextField: UITextField!
     @IBOutlet weak var LabelOutlet1: UILabel!
@@ -34,12 +36,17 @@ class ViewController: UIViewController {
         LabelOutlet4.isHidden = true
         LabelOutlet5.isHidden = true
         LabelOutlet6.isHidden = true
+        UpperImage.image = UIImage(named: "thecrew")
+        LowerImage.image = UIImage(named: "Choose")
     }
     @IBAction func StudentAdd(_ sender: UIButton) {
         //add a student to the array
         students[count] = MainTextField.text
         count = count+1
+        MainTextField.text = ""
+        MainTextField.resignFirstResponder()
     }
+    
     @IBAction func GenerateButton(_ sender: UIButton) {
         //randomly picking students, filing into labels
         var count2 = 0
@@ -78,27 +85,30 @@ class ViewController: UIViewController {
                 count7 = count6 + 1
             }
             LabelOutlet1.isHidden = false
+            LabelOutlet1.text = "\(group1)"
             LabelOutlet2.isHidden = false
+            LabelOutlet2.text = "\(group2)"
             if group3 != nil {
                 LabelOutlet3.isHidden = false
-                var count8 = 0
-                while couunt8 < group3.count {
-                    <#code#>
-                }
+                LabelOutlet3.text = "\(group3)"
             }
             if group4 != nil {
                 LabelOutlet4.isHidden = false
+                LabelOutlet4.text = "\(group4)"
             }
             if group5 != nil {
                 LabelOutlet5.isHidden = false
+                LabelOutlet5.text = "\(group5)"
             }
             if group6 != nil {
                 LabelOutlet6.isHidden = false
+                LabelOutlet6.text = "\(group6)"
             }
             
         }
         
     }
+    
     @IBAction func GroupAmount(_ sender: UISegmentedControl) {
         //set the amount of students per group
         let DaGroup = sender.selectedSegmentIndex
