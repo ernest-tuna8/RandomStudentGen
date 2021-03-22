@@ -10,13 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     var groups = 2
     var count = 0
-    var students = [Int:String]()
-    var group1 = [Int:String]()
-    var group2 = [Int:String]()
-    var group3 = [Int:String]()
-    var group4 = [Int:String]()
-    var group5 = [Int:String]()
-    var group6 = [Int:String]()
+    var badcount: Int!
+    var students = [String]()
+    var students2 = [String]()
     @IBOutlet weak var UpperImage: UIImageView!
     @IBOutlet weak var LowerImage: UIImageView!
     
@@ -33,8 +29,16 @@ class ViewController: UIViewController {
     }
     @IBAction func StudentAdd(_ sender: UIButton) {
         //add a student to the array
-        students[count] = MainTextField.text
+        let alert = UIAlertController(title: "Nothing entered", message: "There are no names entered in the text field", preferredStyle: .alert)
+        let ExitAlert = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(ExitAlert)
+        if MainTextField.text == "" {
+            self.present(alert, animated: true)
+        }
+        students[count] = MainTextField.text!
+        students2[count] = MainTextField.text!
         count = count+1
+        badcount = count-1
         MainTextField.text = ""
         MainTextField.resignFirstResponder()
     }
@@ -45,16 +49,26 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "No Students", message: "There are no students entered", preferredStyle: .alert)
         let ExitAlert = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(ExitAlert)
-            let randomstudent = Int.random(in: 1...students.capacity)
-        LabelOutlet3.text = "\(students[randomstudent])"
+        if count == 0 || badcount == -1 {
+            self.present(alert, animated: true)
+        }
+        else {
+            badcount = badcount-1
+            let randomstudent = Int.random(in: 0...count-1)
+        LabelOutlet3.isHidden = false
+        LabelOutlet3.text = "\(String(describing: students[randomstudent]))"
+            students.remove(at : randomstudent)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! TheViewController2ElectricBoogaloo
+        nvc.length = count
+        print(count)
+        nvc.studentarray = students
     }
     
-    @IBAction func GroupAmount(_ sender: UISegmentedControl) {
-        //set the amount of students per group
-        let DaGroup = sender.selectedSegmentIndex
-        groups = DaGroup
+    @IBAction func Refresh(_ sender: UIButton) {
+        students = students2
     }
-    
-
 }
 
