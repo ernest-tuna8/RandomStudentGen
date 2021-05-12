@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Umq-pN-4fW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -17,21 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1GM-zU-das">
-                                <rect key="frame" x="88" y="59" width="136" height="34"/>
+                                <rect key="frame" x="88" y="202" width="136" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmE-GZ-Sox">
-                                <rect key="frame" x="232" y="59" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add a student"/>
-                                <connections>
-                                    <action selector="StudentAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="24y-bi-LfP"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzN-va-u0z">
-                                <rect key="frame" x="88" y="97" width="240" height="128"/>
+                                <rect key="frame" x="89" y="259" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pj0-3k-Suw">
@@ -39,40 +31,71 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6w-O6-Tee">
-                                <rect key="frame" x="103" y="438" width="210" height="21"/>
+                                <rect key="frame" x="102" y="590" width="210" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-fp-UjN">
-                                <rect key="frame" x="142" y="233" width="133" height="30"/>
+                                <rect key="frame" x="139" y="395" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="See complete class"/>
                                 <connections>
                                     <segue destination="wFP-hq-AFm" kind="show" id="sil-UR-Lc1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPJ-rZ-J2f">
-                                <rect key="frame" x="162" y="613" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Refresh Class"/>
-                                <connections>
-                                    <action selector="Refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deE-iy-dsZ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIj-GS-RSY">
-                                <rect key="frame" x="143" y="284" width="132" height="30"/>
+                                <rect key="frame" x="141" y="433" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate a student"/>
                                 <connections>
                                     <action selector="GenerateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5AC-hc-hoi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmE-GZ-Sox">
+                                <rect key="frame" x="233" y="206" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add a student"/>
+                                <connections>
+                                    <action selector="StudentAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="24y-bi-LfP"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="n7a-yQ-5Zw">
+                                <rect key="frame" x="20" y="102" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Class 1"/>
+                                    <segment title="Class 2"/>
+                                    <segment title="Class 3"/>
+                                    <segment title="Class 4"/>
+                                    <segment title="Class 5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentController2ElectricBoogaloo:" destination="BYZ-38-t0r" eventType="valueChanged" id="eVn-1r-e0O"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDq-Qw-qW3">
+                                <rect key="frame" x="173" y="672" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Refresh all"/>
+                                <connections>
+                                    <action selector="RefreshAllButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WrW-eP-YX5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPJ-rZ-J2f">
+                                <rect key="frame" x="162" y="619" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Refresh Class"/>
+                                <connections>
+                                    <action selector="Refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deE-iy-dsZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b3a-T5-1v4"/>
                     <connections>
                         <outlet property="LabelOutlet3" destination="K6w-O6-Tee" id="zMB-3h-9uE"/>
                         <outlet property="LowerImage" destination="Pj0-3k-Suw" id="9ef-3Z-f45"/>
@@ -82,18 +105,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217.39130434782609" y="-54.910714285714285"/>
+            <point key="canvasLocation" x="2037.68115942029" y="-54.910714285714285"/>
         </scene>
-        <!--The View Controller2 Electric Boogaloo-->
+        <!--Another View Controller-->
         <scene sceneID="OyD-U5-UhV">
             <objects>
-                <viewController id="wFP-hq-AFm" customClass="TheViewController2ElectricBoogaloo" customModule="RandomStudentGen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wFP-hq-AFm" customClass="AnotherViewController" customModule="RandomStudentGen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Niw-ck-6c4" customClass="the">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJL-fH-ikr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hJL-fH-ikr" customClass="Another">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DaCell" textLabel="YiM-p9-Df4" style="IBUITableViewCellStyleDefault" id="8Xj-G2-f4k">
@@ -132,7 +155,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLz-4a-nxo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="-55"/>
+            <point key="canvasLocation" x="2815.9420289855075" y="-55.580357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XuR-VQ-slV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Umq-pN-4fW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9dl-dA-NiQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YX0-OU-pl5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNd-2k-kaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127.536231884058" y="-54.910714285714285"/>
         </scene>
     </scenes>
     <resources>
